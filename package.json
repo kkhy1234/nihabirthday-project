@@ -1,0 +1,15 @@
+{
+  "name": "nihabirthday-project",
+  "version": "1.0.0",
+  "description": "리니하님 생일축하해요",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
