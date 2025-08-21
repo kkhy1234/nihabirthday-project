@@ -3,29 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>로그인</title>
+
   <link rel="icon" href="../../img/favicon/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../../css/login/login.css">
   <link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
-  <title>초대장 확인</title>
+  <link rel="stylesheet" href="../../css/bootstrap-icons/font/bootstrap-icons.css">
+  <script src="../../js/login/index.js"></script>  
 </head>
 <body>
   <div class="main_container">
     <div class="loginbox p-3 mb-3 bg-light border rounded-5">
       <div id="login_header">
         <img src="../../img/login/firework.png" class="firework-img">
+
         <div class="profile-border">
           <img src="../../img/login/loginProfile.jpg" class="profile-img" alt="프로필">
         </div>
         <img src="../../img/login/firework.png" class="firework-img-trans">
       </div>
 
-      <strong>초대장 코드를 입력해주세요!</strong>
+      <strong>인증 코드를 입력해주세요!</strong>
 
-      <div id="input_box">
-        <input type="text" class="form-control" id="invateCode" placeholder="초대장 코드 입력...">
-      </div>
+      <div class="form-floating position-relative w-100">
+        <input type="password" class="form-control" id="invateCode" placeholder="인증코드">
+        <label for="invateCode">인증코드</label>
 
-      <button id="check_btn" type="button" class="btn btn-primary">확인 →</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary toggle-btn" id="togglePassword" onclick="clickTogglePw()">
+          <i class="bi bi-eye"></i>
+        </button>
+      </div>      
+
+      <button id="check_btn" type="button" class="btn btn-primary">LOG IN ▶</button>
 
       <a herf="#" id="loginGuest_btn">>> Guest로 접속하기 <<</a>
     </div>
