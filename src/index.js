@@ -58,6 +58,11 @@ app.use((req, res) => {
   res.status(500).sendFile(path.join(__dirname, "public", "webapp", "error", "500error.html"));
 });
 
+app.use((req, res, next) => {
+  res.setHeader("Cache-Control", "no-store");
+  next();
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
