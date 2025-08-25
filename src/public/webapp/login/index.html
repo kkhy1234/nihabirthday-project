@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-  <title>로그인</title>
+  <title>편지함이 도착했어요!</title>
 
   <link rel="icon" href="../../img/favicon/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../../css/login/login.css">
@@ -23,20 +23,18 @@
         <img src="../../img/login/firework.png" class="firework-img-trans">
       </div>
 
-      <strong>인증 코드를 입력해주세요!</strong>
+      <strong>편지함 비밀번호를 입력해주세요!</strong>
 
       <div class="form-floating position-relative w-100">
-        <input type="password" class="form-control" id="invateCode" placeholder="인증코드">
-        <label for="invateCode">인증코드</label>
+        <input type="password" class="form-control" id="invateCode" placeholder="비밀번호" required >
+        <label for="invateCode">비밀번호</label>
 
         <button type="button" class="btn btn-sm btn-outline-secondary toggle-btn" id="togglePassword" onclick="clickTogglePw()">
           <i class="bi bi-eye"></i>
         </button>
       </div>      
 
-      <button id="check_btn" type="button" class="btn btn-primary">LOG IN ▶</button>
-
-      <a herf="#" id="loginGuest_btn">>> Guest로 접속하기 <<</a>
+      <button id="check_btn" type="button" class="btn btn-primary" onclick="clickLoginBtn()">편지함 열어보기 ▶</button>
     </div>
   </div>
 </body>
