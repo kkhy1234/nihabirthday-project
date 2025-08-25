@@ -1,3 +1,4 @@
+// ================ [ function ] =====================
 function clickTogglePw() {
     const togglePw = document.querySelector("#togglePassword");
     const inputPw = document.querySelector("#invateCode");
@@ -39,3 +40,14 @@ function clickLoginBtn() {
     })
     .catch(err => console.error("로그인 요청 에러:", err));    
 }
+
+// ================ [ js code ] ================
+document.addEventListener("DOMContentLoaded", () => {
+    const input = document.querySelector('#invateCode');
+
+    input.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            clickLoginBtn();
+        }
+    })
+});

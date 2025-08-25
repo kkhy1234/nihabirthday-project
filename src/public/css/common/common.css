@@ -1,0 +1,8 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #f5fad5, #a0e7e5);
+  -webkit-text-size-adjust: none;
+}

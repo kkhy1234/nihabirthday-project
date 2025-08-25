@@ -20,6 +20,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.get("/", (req, res) => {
+
+  if (req.session.user) {
+    return res.redirect("/dashboard");
+  }
+
   res.sendFile(path.join(__dirname, "public", "webapp", "login", "index.html"))
 });
 
@@ -46,6 +51,11 @@ app.get("/logout", (req, res) => {
   req.session.destroy(() => {
     res.redirect("/");
   });
+});
+
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, "public", "webapp", "error", "404error.html"));
+  res.status(500).sendFile(path.join(__dirname, "public", "webapp", "error", "500error.html"));
 });
 
 app.listen(port, () => {
